@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Source+Serif+Pro:400,700);
+@import 'variables';
+
+/********** global styles **********/
+html {font-size: 16px;}
+
+body {
+	background: url('/images/bg.png');
+	font-family: 'Source Serif Pro', serif;
+	margin: 0;
+	color: #444;
+}
+
+form, label {display: block}
+
+input {
+	border: 1px solid $color-light-grey;
+}
+
+hr {border: 1px solid #888;}
+
+.emphasis {
+	font-weight: 700;
+}
+
+/***********************************
+			header styles
+/**********************************/
+header {
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: $color-main-bg;
+	padding: 1em 3em;
+	overflow: hidden;
+	border-top: 10px solid $color-dark-grey;
+	line-height: 4em;
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.3);
+	.logo-area img, 
+	.logo-area h1 {
+	float: left;
+	}
+
+	h1 {
+		margin: 0 1em 0 0.5em;
+		color: $color-main-detail;
+
+	}
+
+	nav {
+		float: left;
+	}
+
+	a {
+		font-weight: 700;
+		text-decoration: none;
+		color: $color-dark-grey;
+		text-transform: uppercase;
+		margin: 0 1em;
+	}
+}
+
+/***********************************
+			main area styles
+/**********************************/
+
+.main-content {
+	clear: both;
+	float: left;
+	width: 52%;
+	background-color: $color-main-bg;
+	margin: 1.5em 1.5em 1.5em 3em;
+	padding: 2em;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+}
+
+form {
+	border-bottom: 2px solid $color-light-grey;
+	overflow: hidden;
+	padding-bottom: 2em;
+
+	div {
+		float: left;
+		margin-right: 1em;
+	}
+
+	label {
+		font-size: 1.25em;
+	}
+	
+	input {
+		height: 2.5em;
+		width: 20em;
+		padding: 0.25em;
+	}
+	
+	button {
+		background-color: $color-submit-button;
+		border: none;
+		color: white;
+		font-weight: 300;
+		font-size: 1.25em;
+		width: 10em;
+		height: 1.75em;
+		border-radius: 5px;
+		margin-top: 1.25em;
+		cursor: pointer;
+	}
+}
+
+.job-post:nth-child(n+1) {
+	border-top: 1px solid $color-light-grey;
+}
+
+.job-post {
+	h2 {
+		color: $color-main-detail;
+	}
+	.date-posted {
+		float: right;
+		color: $color-light-grey;
+		-webkit-margin-before: 1em;
+	}
+	.job-description {color: #888;}
+
+	.skill {
+		background-color: $color-secondary-bg;
+		border: 1px solid $color-secondary-border;
+		padding: 0.25em;
+		margin-right: 0.25em;
+	}
+}
+
+
+/***********************************
+			sidebar styles
+/**********************************/
+aside {
+	background: transparent;
+	width: 33%;
+	float: left;
+	margin-top: 1.5em;
+}
+
+.info-box {
+	background-color: $color-secondary-bg;
+	padding: 2em;
+	margin-bottom: 2em;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+	border: 1px solid $color-secondary-border;
+
+	h2 {
+		font-size: 2.25em;
+		font-weight: 400;
+		margin: 0;
+	}	
+}
+
+.create-profile {
+	background-color: $color-dark-grey;
+	width: 100%;
+	color: #fff;
+	border: none;
+	padding: 0.5em;
+	font-size: 1.5em;
+	border-radius: 10px;
+}
+
+.company-box {
+	background-color: $color-main-bg;
+	padding: 2em;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+
+	h2 {
+		font-size: 1.75em;
+		font-weight: 400;
+		margin: 0;
+	}
+
+	.company-info {
+	text-align: center;
+	}
+}
+
+.logo-box {
+	background: url('../assets/featured.jpg') no-repeat;
+	background-size: contain;
+	text-align: center;
+	// position: relative
+
+	// .featured {
+	// width: 100%
+	// }
+
+	// .featured-logo {
+		// position: absolute;
+		// left: 25%;
+		// top: 60%;
+	// 	height: 90%
+	// 	width: 50%;
+	// }
+
+	img {margin-top: 5em;}
+}
+
+.featured-name {
+	margin: 0;
+	font-size: 3.5em;
+	color: $color-featured;
+}
+
+.featured-location{
+	margin: 0;
+	font-size: 1.5em;
+}
