@@ -17,7 +17,7 @@ export default React.createClass({
 	},
 	render: function() {
 		let links = [
-			<a href="#" key="jobs">Jobs</a>,
+			<Link to="/">Jobs</Link>,
 			<a href="#" key="companies">Companies</a>,
 			<a href="#" key="why">Why Fresh Jobs?</a>
 		];
