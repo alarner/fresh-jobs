@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import {hashHistory} from 'react-router';
 
 import user from '../stores/user';
 
@@ -40,6 +41,7 @@ export default React.createClass({
 		})
 		.done(u => {
 			user.set(u);
+			hashHistory.push('/');
 		})
 		.error(err => {
 			this.setState({

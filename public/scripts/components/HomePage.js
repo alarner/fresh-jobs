@@ -9,6 +9,7 @@ export default React.createClass({
 		});
 		return (
 			<section>
+				<h1>Home</h1>
 				<form>
 					<div>
 						<label htmlFor="keyword">Keyword</label>

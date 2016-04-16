@@ -17,16 +17,16 @@ export default React.createClass({
 	},
 	render: function() {
 		let links = [
-			<Link to="/">Jobs</Link>,
-			<a href="#" key="companies">Companies</a>,
-			<a href="#" key="why">Why Fresh Jobs?</a>
+			<Link to="/" key="home">Jobs</Link>,
+			<Link to="/companies" key="companies">Companies</Link>,
+			<Link to="/why" key="why">Why Fresh Jobs?</Link>
 		];
 		if(!user.isLoggedIn()) {
-			links.push(<a href="#login" key="login">Login</a>);
-			links.push(<a href="#register" key="register">Register</a>);
+			links.push(<Link to="/login" key="login">Login</Link>);
+			links.push(<Link to="/register" key="register">Register</Link>);
 		}
 		else {
-			links.push(<a href="#post" key="post">Post a Job</a>);
+			links.push(<Link to="/post" key="post">Post a Job</Link>);
 			links.push(<a href="#" key="logout" onClick={this.logout}>Logout</a>);
 		}
 
