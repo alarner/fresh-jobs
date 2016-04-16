@@ -5,6 +5,7 @@ export default Backbone.Model.extend({
 		id: null,
 		name: '',
 		headquarters: '',
+		numEmployees: 0,
 		createdAt: null,
 		updatedAt: null
 	},

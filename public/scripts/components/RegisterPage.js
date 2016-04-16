@@ -15,19 +15,19 @@ export default React.createClass({
 				<h1>Register Page</h1>
 				<form onSubmit={this.register}>
 					<div>
-						<div className="error">{this.state.errors.firstName ? this.state.errors.firstName.message : ''}</div>
+						<div className="error">{this.state.errors.firstName}</div>
 						<input type="text" placeholder="first name" ref="firstName" />
 					</div>
 					<div>
-						<div className="error">{this.state.errors.lastName ? this.state.errors.lastName.message : ''}</div>
+						<div className="error">{this.state.errors.lastName}</div>
 						<input type="text" placeholder="last name" ref="lastName" />
 					</div>
 					<div>
-						<div className="error">{this.state.errors.email ? this.state.errors.email.message : ''}</div>
+						<div className="error">{this.state.errors.email}</div>
 						<input type="text" placeholder="email" ref="email" />
 					</div>
 					<div>
-						<div className="error">{this.state.errors.password ? this.state.errors.password.message : ''}</div>
+						<div className="error">{this.state.errors.password}</div>
 						<input type="password" placeholder="password" ref="password" />
 					</div>
 					<button type="submit">Register</button>
@@ -54,7 +54,7 @@ export default React.createClass({
 		})
 		.error(err => {
 			this.setState({
-				errors: err.responseJSON
+				errors: err.e.toJSON()
 			});
 		});
 	}

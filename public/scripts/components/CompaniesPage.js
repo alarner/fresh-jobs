@@ -4,7 +4,7 @@ export default React.createClass({
 	render: function() {
 		return (
 			<section>
-				<h1>Companies</h1>
+				<h1>Companies Page</h1>
 			</section>
 		);
 	}

@@ -31,13 +31,15 @@ export default React.createClass({
 		}
 
 		return (
-			<header>
-				<div className="logo-area">
-					<img src="/images/logo.png" />
-					<h1>Fresh Jobs</h1>
+			<nav>
+				<div className="nav-container">
+					<Link to="/" className="logo-container">
+						<img src="/images/logo.png" />
+						<h1>Fresh Jobs</h1>
+					</Link>
+					<div className="links">{links}</div>
 				</div>
-				<nav>{links}</nav>
-			</header>
+			</nav>
 		);
 	},
 	logout: function(e) {

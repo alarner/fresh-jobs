@@ -6,8 +6,14 @@ exports.up = function(knex, Promise) {
 		t.dateTime('deletedAt').nullable();
 
 		t.string('name').notNull();
-		t.string('headQuarters').notNull();
+		t.string('headquarters').notNull();
 		t.integer('numEmployees').notNull();
+		t.integer('userId')
+			.unsigned()
+			.notNull()
+			.references('id')
+			.inTable('users')
+			.onDelete('CASCADE');
 	});
 };
 

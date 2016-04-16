@@ -1,0 +1,32 @@
+@import '../../node_modules/rayon/src/styles/_rayon';
+@import '../../node_modules/rayon/src/styles/_theme';
+
+.company-selection {
+	overflow: hidden;
+	.company-wrapper {
+		display: block;
+		float: left;
+		width: 50%;
+		box-sizing: border-box;
+
+		&:nth-child(odd) {
+			padding-right: 0.5rem;
+		}
+		&:nth-child(even) {
+			padding-left: 0.5rem;
+		}
+	}
+	.company {
+		cursor: pointer;
+		display: block;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		height: 7rem;
+		margin-bottom: 1rem;
+	}
+	.selected {
+		border: 2px solid #000;
+	}
+}
+
+// @media (min-width:)

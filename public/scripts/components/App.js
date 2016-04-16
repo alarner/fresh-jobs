@@ -4,10 +4,10 @@ import Navigation from './Navigation';
 export default React.createClass({
 	render: function() {
 		return (
-			<section>
+			<main>
 				<Navigation />
 				{this.props.children}
-			</section>
+			</main>
 		);
 	}
 });

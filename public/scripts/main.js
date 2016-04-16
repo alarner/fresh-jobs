@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import $ from 'jquery';
+import Backbone from 'backbone';
+import {globalErrorHandler, sync} from './sync';
+
+$.ajaxSetup({
+	error: globalErrorHandler,
+	dataType: 'json'
+});
+Backbone.sync = sync;
 
 import App from './components/App';
 import HomePage from './components/HomePage';
@@ -24,5 +33,5 @@ ReactDOM.render(
 			</Route>
 		</Router>
 	</div>,
-	document.querySelector('main')
+	document.getElementById('app')
 );
